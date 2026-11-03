@@ -1,5 +1,7 @@
 # Project configuration for the LLMOps course, filled in for you at onboarding.
 # Resources are provisioned at onboarding except the volume, which you create during the course.
+# embedding_endpoint is the serving endpoint for ai_query, AI Search and DatabricksServingEndpoint;
+# embedding_service is the AI Gateway model service for the OpenAI client (README.md).
 
 # Your usage policy: set it on every serverless job, endpoint and app you create.
 usage_policy_id: "c11f466b-46b6-34c5-a08b-47e30534a375"
@@ -13,9 +15,10 @@ dev:
   schema: "louis_willems"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "6045170276ba3d6c"
-  experiment_path: "/llmops/louis_willems-dev"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "4a258a5b43276479"
+  experiment_path: "/llmops/louis-willems-dev"
   # Your provisioned Lakebase project.
   lakebase_instance: "lb-llmops-louis-willems"
 
@@ -25,9 +28,10 @@ acc:
   schema: "louis_willems"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "6045170276ba3d6c"
-  experiment_path: "/llmops/louis_willems-acc"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "4a258a5b43276479"
+  experiment_path: "/llmops/louis-willems-acc"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-louis-willems"
 
@@ -37,8 +41,9 @@ prd:
   schema: "louis_willems"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "6045170276ba3d6c"
-  experiment_path: "/llmops/louis_willems-prd"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "4a258a5b43276479"
+  experiment_path: "/llmops/louis-willems-prd"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-louis-willems"
